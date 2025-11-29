@@ -3,30 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网页</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        a {
-            color: #409eff;
-            text-decoration: none;
-        }
-    </style>
+    <title>绘星记梦工作室 | 绘聚星光，记录梦境</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入一些好看的字体图标 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>欢迎来到我的网页</h1>
-    <p>这是我在 GitHub Pages 上部署的第一个页面。</p>
-    <p>你可以点击下面的链接跳转到我的 GitHub：</p>
-    <a href="https://github.com/NikoBellic586" target="_blank">我的 GitHub</a>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">绘星记梦工作室</div>
+        <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#games">游戏作品</a></li>
+            <li><a href="#careers">加入我们</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- 首页大图区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>绘聚星光，记录梦境</h1>
+            <p>我们致力于创造触动心灵的沉浸式游戏体验。</p>
+            <a href="#games" class="btn-main">探索我们的世界</a>
+        </div>
+    </section>
+
+    <!-- 游戏作品区域 -->
+    <section id="games" class="section-padding">
+        <h2 class="section-title">主要作品</h2>
+        <div class="games-container">
+            <!-- 游戏 1 -->
+            <div class="game-card">
+                <div class="game-image" style="background-color: #333; color: #fff; display: flex; align-items: center; justify-content: center;">
+                    <!-- 这里建议以后替换为您游戏的实际截图 -->
+                    <i class="fa-solid fa-gamepad fa-3x"></i>
+                </div>
+                <div class="game-info">
+                    <h3>寄叶部队：重生</h3>
+                    <p class="genre">类型：动作 RPG / 科幻</p>
+                    <p class="description">在废墟中寻找希望，体验极致的战斗快感与深刻的剧情叙事。重铸荣光，就在此刻。</p>
+                    <button class="btn-secondary">查看详情</button>
+                </div>
+            </div>
+
+            <!-- 游戏 2 -->
+            <div class="game-card">
+                <div class="game-image" style="background-color: #444; color: #fff; display: flex; align-items: center; justify-content: center;">
+                    <!-- 这里建议以后替换为您游戏的实际截图 -->
+                    <i class="fa-solid fa-radiation fa-3x"></i>
+                </div>
+                <div class="game-info">
+                    <h3>Madness Rebuilt</h3>
+                    <p class="genre">类型：策略 / 模拟 / 动作</p>
+                    <p class="description">在疯狂的世界中重建秩序。独特的画风与硬核的玩法结合，挑战你的反应与策略极限。</p>
+                    <button class="btn-secondary">查看详情</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 招聘区域 -->
+    <section id="careers" class="section-padding bg-darker">
+        <h2 class="section-title">招贤纳士</h2>
+        <p class="career-intro">我们需要充满热情、才华横溢的你，一起来做最酷的游戏！</p>
+        
+        <div class="jobs-container">
+            <div class="job-card">
+                <h3>Unity 客户端开发</h3>
+                <span class="tag">全职/远程</span>
+                <p>负责游戏核心玩法的实现，熟悉 C#，有良好的数学基础。</p>
+                <a href="mailto:hr@huixingstudio.com" class="btn-text">发送简历 &rarr;</a>
+            </div>
+
+            <div class="job-card">
+                <h3>2D/3D 游戏美术</h3>
+                <span class="tag">全职/兼职</span>
+                <p>负责角色、场景设计。拥有独特的审美风格，能够驾驭科幻或废土题材。</p>
+                <a href="mailto:hr@huixingstudio.com" class="btn-text">发送简历 &rarr;</a>
+            </div>
+            
+            <div class="job-card">
+                <h3>游戏策划</h3>
+                <span class="tag">实习/全职</span>
+                <p>脑洞大，逻辑强，热爱游戏，能够撰写详细的设计文档。</p>
+                <a href="mailto:hr@huixingstudio.com" class="btn-text">发送简历 &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>绘星记梦工作室</h4>
+                <p>用心做游戏，用爱造梦。</p>
+            </div>
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>商务合作: business@huixingstudio.com</p>
+                <p>加入我们: hr@huixingstudio.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-weixin"></i></a>
+                    <a href="#"><i class="fa-brands fa-weibo"></i></a>
+                    <a href="#"><i class="fa-brands fa-bilibili"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 绘星记梦工作室 版权所有 | 此网站仅为演示
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

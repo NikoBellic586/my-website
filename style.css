@@ -1,0 +1,308 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+body {
+    background-color: #121212; /* 深色背景 */
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(18, 18, 18, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8a2be2; /* 紫色高亮 */
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8a2be2;
+}
+
+/* Hero 区域 */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* 这里的图片是在线占位图 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #bbb;
+}
+
+/* 按钮样式 */
+.btn-main {
+    padding: 0.8rem 2rem;
+    background-color: #8a2be2;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #6a1b9a;
+}
+
+.btn-secondary {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #8a2be2;
+    background: transparent;
+    color: #8a2be2;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #8a2be2;
+    color: white;
+}
+
+/* 通用 Section */
+.section-padding {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8a2be2;
+    margin: 10px auto 0;
+}
+
+/* 游戏作品 */
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.game-image {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+}
+
+.game-info {
+    padding: 1.5rem;
+}
+
+.game-info h3 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.genre {
+    font-size: 0.9rem;
+    color: #8a2be2;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 招聘区域 */
+.bg-darker {
+    background-color: #0a0a0a;
+}
+
+.career-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #bbb;
+}
+
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.job-card {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #8a2be2;
+}
+
+.job-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    background: #333;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.job-card p {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-text {
+    color: #8a2be2;
+    font-weight: bold;
+}
+
+/* 页脚 */
+footer {
+    background: #000;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #8a2be2;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* 移动端适配 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
